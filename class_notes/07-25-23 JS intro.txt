@@ -1,0 +1,88 @@
+
+
+Computer: 
+A computer is an electronic machine that is used to input, process, and then output data, typically in binary form, according to instructions given to it in a variable program
+
+    - machine 
+    -transforms input to output
+    -code 
+    -data
+
+    0 1 2 3 4 5 6 7 8 9 --> base-10 number system 
+    -binary code: ones and zeros
+     - Known as base-2 number system 
+        - 0 = ON  
+        - 1 = OFF 
+        -It is the machine language what computer understands
+        -All the letters, digits, shapes and more are converted to binary code to be understood and processed
+        by the computer.
+    Computer is consist of software and hardware, CPU.
+        Software: Operating systems (mac, windows) Microsoft office suite, Paint, applications.
+        Hardware: Mouse, screen, printer, hard-disk
+
+    -carry out sequences of logical operations
+
+
+Binary Units:
+Bits: one or zeros
+Byte: 8bits (01100010)
+
+
+
+
+
+
+MAC: cmd --> command
+Windows: CTRL
+
+
+
+
+Programming language:
+-You can create applications
+-communication with the machine 
+-has rules (SYNTAX)
+-Examples: JavaScript, Java, Go, Python, C# 
+
+interpreted languages: JavaScript
+compiled languages: lack ambiguity - confusion - conflict 
+
+Compilation - compile - compiler  -> checking if your code is grammatically correct
+execution - execute - executor   -> running the code 
+
+INSTALL node.js and check the version
+1. Download it from https://nodejs.org/en/download
+2. Mac terinal and run   "node -v "
+
+console.log()
+
+
+"+" Operator
+when used between strings = concatenation
+Example: "hello" + "abc"  -> helloabc
+        "123" + "12" -> 12312
+
+when used between numbers (without quotes) = addition
+
+Example1 + 2 = 3
+
+
+When used between string and number = concatenation
+Example: "John" + 45 -> John45
+
+When used between number and string = concatenation
+Example: 4 + "abc" -> 4abc
+
+
+
+
+
+
+
+
+
+
+
+
+
+

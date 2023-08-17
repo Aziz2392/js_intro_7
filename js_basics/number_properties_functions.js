@@ -1,0 +1,4 @@
+
+
+// Number porperties
+Number.

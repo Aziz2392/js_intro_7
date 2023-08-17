@@ -1,0 +1,24 @@
+
+
+
+"" double quotes
+'' single quotes
+`` backticks 
+
+Console.log() is used for debugging and troubleshooting purposes 
+
+
+Variables - Decleration vs assignment vs initialization
+let name; // decleration - reserve memory for the name
+name = "John"; // assignment "=" is an assignment operator
+let age = 25; // initialization
+
+
+Allowed:
+
+let a ; let b;
+let a , b ; 
+
+Not alloweed:
+let a , let b;
+let a ; b; 
