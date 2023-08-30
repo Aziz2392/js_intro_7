@@ -237,3 +237,10 @@ else if(var8.charCodeAt(0) >= 65 && var8.charCodeAt(0) <=90 || var8.charCodeAt(0
 else{
     console.log(`${var8} Special character`)
 }
+
+
+
+
+for (i = 0; i <= 7; i++){
+    console.log(`The square of ${i} is = ` + i * i);
+}

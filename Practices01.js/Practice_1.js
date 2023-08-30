@@ -71,7 +71,7 @@ let num3 = Math.ceil(Math.random() * 10) * 3;
 let num4 = Math.ceil(Math.random() * 10) * 2;
 let num5 = Math.ceil(Math.random() * 10) * 1;
 
-// let numberss = console.log(num1, num2, num3, num4, num5);
+let numberss = console.log(num1, num2, num3, num4, num5);
 
 let results = console.log(num1 * 5 + num2 * 4 + num3 * 3 + num4 * 2 + num5 * 1);
 
