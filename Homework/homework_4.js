@@ -230,10 +230,10 @@ const fizzBuzz1 = [];
 
     for(i = a; i <= b; i++){
        if(i % 3 === 0 && i % 5 === 0){
-        console.log('FizzBuzz');
+        console.log(fizzBuzz.push('FizzBuzz'));
        }
        else if(i % 3 === 0){
-        console.log('Fizz');
+        console.log(fizzBuzz.push('Fizz'));
        }
        else if(i % 5 === 0){
         console.log('Buzz')
