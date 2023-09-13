@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basic 2</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+        table, td, th {
+            /* border-width: 2px;
+            border-color: black;
+            border-style: solid; */
+
+            border: 2px solid black ;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        th {
+            background-color: darkgray;
+        }
+        
+        tr:nth-child(even){
+            background-color: lightgray;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>First Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Doe</td>
+                    <td>John</td>
+                    <td>JDoe@yahoo.com</td>
+                </tr>
+                <tr>
+                    <td>Jones</td>
+                    <td>Alex</td>
+                    <td>ajones@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Smith</td>
+                    <td>Adam</td>
+                    <td>adamsmith@techglobal.com</td>
+                </tr>
+                <tr>
+                    <td>Smith</td>
+                    <td>Adam</td>
+                    <td>adamsmith@techglobal.com</td>
+                </tr>
+                <tr>
+                    <td>Smith</td>
+                    <td>Adam</td>
+                    <td>adamsmith@techglobal.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+     <h1>Forms</h1>  
+     <form action="#">
+        <p> 
+            <label for="username">Username:</label>
+         <input type="text">
+        </p>
+        <p>
+        <label for="password">Password:</label>
+        <input type="password">
+        </p>
+        <p>
+            <input type="text">
+        </p>
+        <p>
+            <label for="language">What languages you know of</label>
+            <br>
+            <label for="js">JS</label>
+            <input type="checkbox">
+            <label for="java">Java</label>
+            <input type="checkbox">
+        </p>
+        <p>
+            <label for="gender">Please select your gender</label>
+            <br>
+            <label for="female">
+                Female
+            <input type="radio" name="gender">
+        </label>
+            <label for="male">Male</label>
+            <input type="radio" name="gender">
+            <label for="na">N/A</label>
+            <input type="radio" name="gender">
+        </p>
+        <p>
+            <label for="reference">Anything you want to share</label>
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+        
+        <p>
+            <input type="submit">
+        </p>
+     </form>
+     <hr>
+     <h1>Dropdowns</h1>
+     <select name="color" >
+        <option value="color" disabled selected>Color </option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+     </select>
+    
+
+</body>
+</html>

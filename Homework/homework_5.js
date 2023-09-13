@@ -165,18 +165,33 @@ console.log(isPrime(6));
 
 
 // TASK 12 (complete)
-
+/*
 function removeExtraSpaces(str4){
   console.log(str4.replace(/\s+/g, ' ').trim())
 }
 
 removeExtraSpaces("     Hello      World    ");
+*/
+
+
+////////
+const removeExtraSpaces = (str4) => {
+    const str4Arr = str4.trim().split(' '); // str4.trim().split(' ').filter(s => s.length > 0).join('');
+    let result =''
+
+    for(s of str4Arr){
+        if(s !== '') result += s 
+    }
+     return result.slice(0, -1)
+} 
+
+removeExtraSpaces()
 
 // TASK 13 (Having a hard time with this one)
 
 
 // TASK 14 (incomplete but close maybe?)
-
+/*
 function isEmailValid(email){
     char = ''
     if(email[0] !== '@' && email.includes('@') && email.slice(email.length - 4).includes('.com') && email.slice(email.indexOf('@'), email.indexOf('.')) === char ) console.log('true');
@@ -184,8 +199,65 @@ function isEmailValid(email){
 }
 
 isEmailValid("aziz@.com");
+*/
+/////////////
+
+const isEmailValid = (email) => {
+    if(email.includes(' ')) return false;  // Has no spaces
+    if(email.split('@').length !== 2) return false; // This checks if there are 2 indexes (1 before and 1 after the @). 
+
+    const beginning = email.split('@')[0]
+    const middle = email.split('@')[1].split('.')[0]
+    const end = email.split('@')[1].split('.')[1]
+
+    if(beginning === undefined || middle === undefined || end === undefined );
+
+   return beginning.length >= 2 && middle.length >= 2 && end.length >= 2 ;
+}
 
 
+console.log(isEmailValid("hello@gmail.com"))
+
+//////
+
+const isDateFormatValid = (date) => {
+if(date.split('/') !== 3) return false;
+
+const beginningDate = date.split('/')[0];
+const middleDate = date.slice(date.indexOf('/') + 1 , date.lastIndexOf('/'));
+const endDate = date.slice(date.lastIndexOf('/') + 1);
+
+if(beginningDate === undefined || middleDate === undefined || endDate === undefined);
+return beginningDate.length === 2 && middleDate.length === 2 & endDate.length === 4 ;
+
+}
+
+console.log(isDateFormatValid("")) ; 			
+console.log(isDateFormatValid("15/30/2020")) ;		
+console.log(isDateFormatValid("10-30-2020 ")); 		
+console.log(isDateFormatValid("10.30.2020")) ; 		
+console.log(isDateFormatValid("5/30/2020")) 	;	
+console.log(isDateFormatValid("05/30/2020")) ;		
+console.log(isDateFormatValid("10/2/2020")) ; 		
+console.log(isDateFormatValid("10/02/2020")) ;
+
+
+/*
+let d = "10/12/2020"
+
+const beginningDate = d.split('/')[0];
+
+//const middleDate = d.split('/')[1];
+const lastDate = d.slice(d.lastIndexOf('/') + 1);
+const middleDD = d.slice(d.indexOf('/') + 1 , d.lastIndexOf('/'));
+const check = d.split('/').length !== 3 ;
+
+console.log(beginningDate);
+console.log(middleDD);
+//console.log(middleDate);
+console.log(lastDate);
+console.log(check);
+*/
 
 // TASK15 (special character, lowercase, uppercase issue)
 

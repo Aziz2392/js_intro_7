@@ -215,3 +215,15 @@ function swapFirstLastWord(w){
     }
 let w = swapFirstLastWord("Javascript love very much I");
  
+
+//////////
+
+const arr5 = ['A', 'B', 'C', 'D'];
+const obj5 = {A: 'A', B: 'B', C: 'C', D: 'D'};
+
+
+const [first, second, ...rest] = arr5;
+console.log(first, second, rest);
+
+const {A, B, ...restKeyVal} = obj5;
+console.log(A, B, restKeyVal);
