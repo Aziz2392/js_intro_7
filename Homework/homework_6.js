@@ -266,5 +266,63 @@ secondMax([7, 4, 4, 4, 23, 23, 23]) ;
 
 
 
+///////////////////////////////////////////
 
 
+
+    let place = 'Planet Earth';
+
+function fullstackHQ(){
+  return middleFunction('United States');
+
+  function middleFunction(country) {
+    return innerFunction('Illinois');
+
+    function innerFunction(state) {
+      city = 'Chicago';
+      return innermostFunction();
+
+      function innermostFunction() {
+        return 'Techglobal is at ' + place + ', ' + country + ', ' + state + ', ' + city  ;
+      }
+    }
+  }
+}
+
+
+console.log(fullstackHQ())
+
+
+/////////////////
+
+//let counter = 0;
+
+const incrementalChange = () => {
+    return counter + n1;
+    function middleCounter(result1){
+        return innercounter(result1 + )
+    }
+}
+
+incrementalChange(2); // => 2
+incrementalChange(6); // => 8
+incrementalChange(-1); // => 7
+
+
+
+let counter = 0;
+
+function addnext(a){
+    counter += a;
+    console.log(counter)
+    return function(b) {
+        counter += b;
+        console.log(counter)
+        return function(c) {
+            counter += c;
+            return counter;
+        }
+    }
+}
+
+console.log(addnext(2)(6)(-1)); 
