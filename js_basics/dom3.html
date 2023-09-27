@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practice DOM</h1>
+
+    <script>
+
+const bodyEl = document.querySelector('body');
+
+const addTodo = (text) => {
+    // Create li item
+    const liEl = document.createElement('li');
+    // Append user text to liEl
+    liEl.textContent = text;
+    // Append liEl inside ulEl
+    ulEl.append(liEl);
+    // Append ulEl inside bodyEl
+    bodyEl.append(ulEl);
+}
+// Create ul 
+const ulEl = document.createElement('ul');
+
+for (let i = 0; i < 3; i++) {
+    const userTodoList = prompt('Enter your todo list');
+    // Apend to body
+    addTodo(userTodoList);
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

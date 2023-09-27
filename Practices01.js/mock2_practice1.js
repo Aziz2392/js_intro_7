@@ -188,5 +188,240 @@ function getDuplicates(arr){
 
 console.log(getDuplicates([0, -4, -7, 0, 5, 10, 45, -7, 0]));
 
+// TASK 17
 
 
+function reverseString(str) {
+    
+    let strArr = str.trim().split(" ");
+
+    for(let i = 0; i < strArr.length; i++) {
+
+        strArr[i] = strArr[i].split("").reverse().join("");
+
+    }
+    return strArr.join(" ");
+}
+
+console.log(reverseString("Hello World"));
+
+
+// TASK 18
+
+function getEvens(num1, num2){
+
+    let evens = [];
+    let lesserNum = Math.min(num1, num2);
+    let greaterNum = Math.max(num1, num2);
+
+    for(let i = lesserNum; i <= greaterNum; i++){
+        if(i % 2 === 0) evens.push(i);
+    };
+    return evens;
+
+}
+
+console.log(getEvens(2, 7));
+
+// TASK 19
+
+function getMultipleof5(num3, num4){
+
+    let multiple5 = []
+    let greaterMul = Math.max(num3, num4);
+    let lesserMul = Math.min(num3, num4);
+
+    for(i = lesserMul; i <= greaterMul; i++){
+        if(i % 5 === 0) multiple5.push(i);
+    }
+    return multiple5
+}
+
+console.log(getMultipleof5(17, 3));
+
+
+// TASK 20
+
+
+
+///////////////////////
+// HOMEWORK 5
+//////////////////////
+
+// TASK 1
+
+const countPos = (arr) => console.log(arr.filter(p => p > 0).length);
+
+// Second way of doing it (Filter function)
+// const countPos = (arr) => {
+//     let count = 0;
+
+//     for(num of arr){
+//         if(num > 0) count++;
+//     }
+
+
+countPos([-45, 0, 0, 34, 5, 67]);
+
+// TASK 2
+
+const countA = (str) => {
+   let countAA = 0;
+    for(s of str){
+        if(s.includes('a') || s.includes('A'))  countAA++
+    }
+    console.log(countAA);
+}
+
+countA("TechGlobal is a QA bootcamp")
+
+// Second way of doing it
+// const countA = (str) => {
+//     let count = 0;
+
+//     for(letter of str){
+//         if(letter.toLowerCase() === 'a') count++;
+//     }
+
+//     return count;
+// }
+
+// 3rd Way const countA = (str) => str.split('').filter(letter => letter.toLowerCase() === 'a').length
+
+
+// TASK 3
+
+const countVow = (str1) => {
+    let countVowels = 0;
+    const vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+
+    for(letter of str1){
+        if(vowels.includes(letter)) countVowels++
+    }
+    console.log(countVowels);
+}
+
+countVow("JavaScript is fun") 
+
+// TASK 4
+
+const countConsonants = (str2) => {
+    let countConst = 0;
+    let vowel = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+
+    for(letters of str2){
+        if(!vowel.includes(letters)) countConst++
+    }
+    console.log(countConst);
+}
+
+countConsonants("JavaScript is fun")
+
+// TASK 5
+
+const countWords = (str3) => console.log(str3.trim().split(' ').length ) ;
+
+countWords("Cypress is an UI automation tool.    ");
+
+
+
+// TASK 6
+
+const factorials = (number) => {
+
+    let factor = number;
+
+    for(let i = number - 1 ; i > 1; i-- ){
+        factor *= i ;
+    }
+    console.log(factor);
+}
+
+factorials(1);
+
+// TASK 7
+
+const isPalindrome = (str4) => {
+    if(str4.toLowerCase() === str4.toLowerCase().split('').reverse().join('')) console.log(true);
+    else console.log(false);
+}
+
+isPalindrome("Hello")  
+isPalindrome("Kayak")  
+isPalindrome("civic")  
+isPalindrome("abba")  
+isPalindrome("ab  a")  
+isPalindrome("123454321")  
+isPalindrome("A")  
+isPalindrome("")  
+
+// TASK 8
+
+const countMultipleWords = (arr2) => {
+    countMult = 0;
+
+    for(words of arr2){
+        if(words.trim().split(' ').length > 1) countMult++;
+    }
+    console.log(countMult);
+
+}
+
+//way 2:
+    // let count = 0;
+
+    // arr.forEach(e => {
+    //     if(e.trim().includes(' ')) count++;
+    // });
+
+countMultipleWords([ "foo", "", "    ", "foo bar", "     foo" ]) 
+countMultipleWords([ "foo", "bar", "foobar", "     foobar   " ]) 
+countMultipleWords([ "f o o", "b a r", "foo bar", "     foo bar   " ])
+countMultipleWords([ ])
+
+// TASK 9
+
+// const count3OrLess = (str5) => str5.trim().split(' ').filter(word => word.length > 0 && word.length <= 3).length;
+
+const count3OrLess = (str5) => {
+    let strArr = str5.trim().split(' ');
+    let count3 = 0;
+
+    for(word of strArr){
+        if(word.length > 0 && word.length <= 3) count3++;
+    }
+    console.log(count3);
+}
+
+count3OrLess("Hello")
+count3OrLess("Hi John")
+count3OrLess("JavaScript is fun")
+count3OrLess("My name is John Doe")
+count3OrLess("")
+
+// TASK 10
+
+const isPrime = (number) => {
+    if(number < 0) return false;
+    if(number === 2 || number === 3) return true;
+    if(number % 2 === 0 || number % 3 === 0) return false;
+
+    let d = 5 ;
+    while(d < number){
+        if(number % d === 0) return false;
+        d += 2;
+
+    }
+    return true;
+
+}
+
+// TASK 11
+
+const add = (arr1, arr2) => {
+    if(arr2.length > arr1.length) [arr1, arr2] = [arr2, arr1] ;
+    console.log(arr1.map((value, i) => value + (arr2[i] || 0 )));
+}
+
+
+add([10, 3, 6, 3, 2], [6, 8, 3, 0, 0, 7, 5, 10, 34])
