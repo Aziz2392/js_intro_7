@@ -85,9 +85,12 @@ console.log(nthWord("", 1))
 
 // TASK 4
 
+const isArmstrong = num => num.toFixed().split('').reduce((total, i) => total + Math.pow(i,num.toFixed().length), 0) === num
 
-
-
+console.log(isArmstrong(153));
+console.log(isArmstrong(123));
+console.log(isArmstrong(1634));
+console.log(isArmstrong(1111));
 
 // TASK 5 reverse number
 
@@ -102,16 +105,22 @@ reverseNumber(111) //	-> 111
 
 // TASK 6 doubleorTriple
 
-function doubleOrTriple(arr, boolean){
+const doubleOrTriple = (arr, isDouble) => isDouble ? arr.map((el) => el * 2) : arr.map((el) => el * 3)
+
+console.log(doubleOrTriple([1, 5, 10], true));
+console.log(doubleOrTriple([3, 7, 2], false));
+console.log(doubleOrTriple([-1, -2], true));
+console.log(doubleOrTriple([0], false));
+console.log(doubleOrTriple([-1, 0, 1], true));
 
 
-    if(boolean === true){
-        for(i = 0; i < arr.length ; i++){
-            ;
-        }
-       return ;
-    }
-}
 
+// TASK 7
 
-console.log(doubleOrTriple([1, 5, 10], true) );
+const splitString = (str, num) => (str.length % num !== 0 || num > str.length) ? '' : str.slice(0, num) + ' ' + str.slice(num)
+
+console.log(splitString('JavaScript', 5));
+console.log(splitString('Java', 2));
+console.log(splitString('Automation', 3));
+console.log(splitString('Hello', 6));
+console.log(splitString('12', 1));
